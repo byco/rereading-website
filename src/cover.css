@@ -3,25 +3,18 @@
  */
 
 /* Links */
-a,
 a:focus,
 a:hover {
-  color: #eb670f;
+  color: #fff;
+}
+
+a {
+  color: #eb670f !important;
 }
 
 .collapse a:link, a:visited {
   text-decoration: underline;
   color: #eb670f !important;
-}
-
-/* Custom default button */
-.btn-secondary,
-.btn-secondary:hover,
-.btn-secondary:focus {
-  color: #333;
-  text-shadow: none; /* Prevent inheritance from `body` */
-  background-color: #fff;
-  border: .05rem solid #fff;
 }
 
 
