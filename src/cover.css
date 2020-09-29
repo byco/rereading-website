@@ -12,11 +12,14 @@ a {
   color: #eb670f !important;
 }
 
+.btn.btn-primary{
+  color: #ffffff !important;
+}
+
 .collapse a:link, a:visited {
   text-decoration: underline;
   color: #eb670f !important;
 }
-
 
 /*
  * Base structure
