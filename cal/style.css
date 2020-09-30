@@ -140,9 +140,9 @@ ul {
     -ms-flex: 40%;
 
         flex: 40%;
-  max-height: 350px;
+  /*max-height: 350px;*/
   position: relative;
-  overflow: hidden;
+  overflow: auto;
     margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 20px;
