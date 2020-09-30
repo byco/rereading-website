@@ -129,7 +129,7 @@ ul {
 }
 
 .sidebar-box {
-  height: 100px;
+  height: 350px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -144,7 +144,7 @@ flex: 1;
         flex: 40%;
   /*max-height: 350px;*/
   position: relative;
-  overflow: auto;
+  overflow: hidden;
     margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 20px;
