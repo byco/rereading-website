@@ -71,7 +71,7 @@ a.morelink {
     display: flex;
     -webkit-flex-wrap: wrap; /* NEW */
     flex-wrap: wrap;
-    height: 20em;
+    font-family: "Open Sans";
 }
 
 ul {
@@ -116,8 +116,9 @@ ul {
 .sidebar-box {
 
 flex: 40%;
+  max-height: 350px;
   position: relative;
-  overflow: auto;
+  overflow: hidden;
     margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 20px;
