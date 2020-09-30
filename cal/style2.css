@@ -142,7 +142,7 @@ flex: 1;
     -ms-flex: 40%;
 
         flex: 40%;
-  /*max-height: 350px;*/
+  max-height: 350px;
   position: relative;
   overflow: auto;
     margin-bottom: 20px;
@@ -159,7 +159,7 @@ flex: 1;
   -ms-flex-direction: column;
   flex-direction: column;
 }
-/*.sidebar-box .read-more { 
+.sidebar-box .read-more { 
       height: 1000vh;
   position: absolute; 
   bottom: 0; 
@@ -170,7 +170,7 @@ flex: 1;
   /* "transparent" only works here because == rgba(0,0,0,0) */
   /*background-image: linear-gradient(to bottom, transparent, black);*/
   /*background-color: #e24104 !important;
-}*/
+}
 
 a {
   color: #ffffff !important;
