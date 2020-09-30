@@ -1,0 +1,120 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Rereading Children's Literature Events</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./jqueryadd.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="./style.css">
+        <!-- Bootstrap core CSS -->
+    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <!---<link href="../src/cover.css" rel="stylesheet">--->
+
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+  </head>
+  <body>
+
+    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
+      <header class="masthead mb-auto">
+        <div class="inner">
+          <h3 class="masthead-brand"></h3>
+          <nav class="nav nav-masthead justify-content-center">
+            <a class="nav-link active" href="../index.html">Home</a>
+            <a class="nav-link active" href="../about.html">About</a>
+            <a class="nav-link active" href="../joinus.html">Join Us</a>
+            <a class="nav-link active" href="../contact.html">Contact</a>
+          </nav>
+        </div>
+      </header>
+      
+    <div id="events-upcoming" class="flex-container">
+    </div>
+    <div id="events-past" class="flex-container">
+    </div>
+    <!---<script src="dist/format-google-calendar.min.js"></script>-->
+    <script src="./app2.js"></script>
+    <script>
+
+      formatGoogleCalendar.init({ 
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/a002kfcn8uapp6anbi70scguvo@group.calendar.google.com/events?key=AIzaSyCM4s7_B47Ikshr3u_mIC3zau5f9fCyjro',
+        past: true,
+        upcoming: false,
+        sameDayTimes: true,
+        pastTopN: 200,
+        upcomingTopN: 200,
+        recurringEvents: true,
+        //itemsTagName: "div class='sidebar-box'",
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '',
+        pastHeading: '<h1>Past events</h1>',
+        format: ["<b>Event: ", '*summary*', '<br>Date:</b> ', '*date*', '<br><b>Location:</b> ', '*location*', '*description*'],
+        timeMin: '2016-06-03T10:00:00-07:00'/*,
+        timeMax: '2020-06-03T10:00:00-07:00'*/
+      });
+            formatGoogleCalendar.init({ 
+        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/a002kfcn8uapp6anbi70scguvo@group.calendar.google.com/events?key=AIzaSyCM4s7_B47Ikshr3u_mIC3zau5f9fCyjro',
+        past: false,
+        upcoming: true,
+        sameDayTimes: true,
+        pastTopN: 200,
+        upcomingTopN: 200,
+        recurringEvents: true,
+        //itemsTagName: "div class='sidebar-box-b'",
+        upcomingSelector: '#events-upcoming',
+        pastSelector: '#events-past',
+        upcomingHeading: '<h1>Upcoming events</h1><p><i>Note: This is the list of events with their full descriptions, so this page is rather long. I suggest you type <u>CTRL + F</u> (find) if you are searching for something in particular.</i></p>',
+        pastHeading: '',
+        format: ["<b>Event: ", '*summary*', '<br>Date:</b> ', '*date*', '<br><b>Location:</b> ', '*location*', '<br> ', '*description*'],
+        timeMin: '2016-06-03T10:00:00-07:00'/*,
+        timeMax: '2020-06-03T10:00:00-07:00'*/
+      });
+
+    $(function() {
+
+			var $el, $ps, $up, totalHeight;
+
+			$(document).on("click", '.sidebar-box .button', function() {
+
+				//alert("hi!!!!");
+
+				totalHeight = 0
+
+				$el = $(this);
+				$p  = $el.parent();
+				$up = $p.parent();
+				$ps = $up.find("p:not('.read-more')");
+
+				// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
+				$ps.each(function() {
+					totalHeight += $(this).outerHeight() + ($(this).outerHeight() * 0.4);
+					// FAIL totalHeight += $(this).css("margin-bottom");
+				});
+
+				$up
+					.css({
+						// Set height to prevent instant jumpdown when max height is removed
+						"height": $up.height(),
+						"max-height": 9999
+					})
+					.animate({
+						"height": totalHeight
+					});
+
+				// fade out read-more
+				$p.fadeOut();
+
+				// prevent jump-down
+				return false;
+
+			});
+
+		});
+    </script>
+  </body>
+</html>
