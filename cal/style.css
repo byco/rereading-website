@@ -1,100 +1,110 @@
-/*a {
-  color: #0254EB
-}
-a:visited {
-  color: #0254EB
-}
-a.morelink {
-  text-decoration:none;
-  outline: none;
-}
-.morecontent span {
-  display: none;
-}
-.comment {
-  width: 400px;
-  background-color: #f0f0f0;
-  margin: 10px;
-}*/
-/*li {
-  margin-bottom: 20px;
-  margin-left: 10px;
-  margin-right: 20px;
-  background-color: #dddddd;
-  padding: 10px;
-  list-style-type:none;
-}*/
-/*.flex-container {
-  /* We first create a flex layout context 
-  display: flex;
-  /* Then we define the flow direction 
-     and if we allow the items to wrap 
-   * Remember this is the same as:
-   * flex-direction: row;
-   * flex-wrap: wrap;
-   
-}*/
-/*.flex-item {
-  max-height: 500px;
-  position: relative;
-  overflow: hidden;
-}*/
-/*.flex-item .read-more {
-  position: absolute; 
-  bottom: 0; 
-  left: 0;
-  width: 100%; 
-  text-align: center; 
-  margin: 0; padding: 30px 0; 
-  background-color: #dddddd;*/
+
+
+/*@media (max-width: 700px) {
   
-  /* "transparent" only works here because == rgba(0,0,0,0) */
-  /*background-image: linear-gradient(to bottom, transparent, black);
-}*/
-/* On screens that are 992px wide or less, go from four columns to two columns */
-/*@media screen and (max-width: 992px) {
-  .column {
-    flex: 100%;
+  main,
+  aside {
+    grid-column: 1 / span 5;
   }
+
+  h1 {
+      font-size: 11.5vw;
+      font-size: 40px;
+  }
+
+h2 {
+  font-size: 10.5vw;
+  font-size: 30px;
+}
+p {font-size: 5.5vw;
+  font-size: 15px;
+}
+  
 }*/
 
-.container {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: -webkit-flex; /* NEW */
+
+
+h1 {
+  text-align: center;
+  line-height: 10px;
+  line-height: 1.0vw;
+  font-family: "Gabriela-Regular";
+  color: #ffffff;
+}
+
+h2 {
+  text-align: center;
+  line-height: 10px;
+  line-height: 1.0vw;
+  color: #fffaeb;
+  font-family: "Gabriela-Regular";
+}
+
+main {
+  font-family: "VarelaRound-Regular";
+  font-size: 16px; 
+  font-size: 1.5vw;
+  padding: 50px;
+  color: #fffaeb;
+  /*background-color: #0aa3a3;*/
+}
+
+aside {
+  font-family: "Snippet-Regular";
+  font-size: 20px; 
+  font-size: 2.0vw;
+  padding: 40px;
+    align-items: center;
+  justify-content: center;
+  /*background-color: #ffa602;*/
+}
+
+
+@font-face {
+  font-family: "Gabriela-Regular";
+  src: url("./fonts/Gabriela-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "VarelaRound-Regular";
+  src: url("./fonts/VarelaRound-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Snippet-Regular";
+  src: url("./fonts/Snippet-Regular.ttf") format("truetype");
+}
+
+/*
+@media only screen and (min-width : 768px) {
+
+  h1 {
+      font-size: 15.5vw;
+      font-size: 100px;
+  }
+  
+h2 {
+  font-size: 13.5vw;
+  font-size: 85px;
+}
+
+main {
+    font-size: 16px; 
+  font-size: 1.5vw;
+}
+
+  input[type=checkbox] ~ .menu{
     display: flex;
-    -webkit-flex-wrap: wrap; /* NEW */
-    flex-wrap: wrap;
-    font-family: "Open Sans";
+    height:auto;
+    background-color: transparent;
+    visibility: visible;
+    opacity: 1;
+    transition: visibility 0s 0.2s, opacity 0.2s ease-out;
+
+  }
+
 }
 
-ul {
+*/
 
-  -ms-box-orient: horizontal;
-  display: -webkit-box;
-  display: -moz-box;
-  display: -ms-flexbox;
-  display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
 
-  -webkit-justify-content: space-between; 
-  justify-content: space-between; 
-
-   width: 100%;
-   padding: 0;
-
-   li {
-      padding: 0;
-   }
-}
-
-/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
-@media screen and (max-width: 600px) {
-  #events-past {
-.collapse a:link, a:visited {
-  text-decoration: underline;
-  color: #eb670f !important;
-} 
-}
