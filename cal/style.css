@@ -129,6 +129,8 @@ ul {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  height: 100vh;
+  flex-direction: column;
 }
 
 .sidebar-box {
