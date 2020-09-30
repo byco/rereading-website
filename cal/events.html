@@ -1,120 +1,249 @@
-<!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Rereading Children's Literature Events</title>
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="./jqueryadd.js"></script>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="./style.css">
-        <!-- Bootstrap core CSS -->
-    <link href="https://getbootstrap.com/docs/4.0/dist/css/bootstrap.min.css" rel="stylesheet">
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
 
-    <!-- Custom styles for this template -->
-    <!---<link href="../src/cover.css" rel="stylesheet">--->
+/*a {
+  color: #0254EB
+}
+a:visited {
+  color: #0254EB
+}
+a.morelink {
+  text-decoration:none;
+  outline: none;
+}
+.morecontent span {
+  display: none;
+}
+.comment {
+  width: 400px;
+  background-color: #f0f0f0;
+  margin: 10px;
+}*/
 
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-  </head>
-  <body>
+/*li {
+  margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  background-color: #dddddd;
+  padding: 10px;
+  list-style-type:none;
+}*/
 
-    <div class="cover-container d-flex h-100 p-3 mx-auto flex-column">
-      <header class="masthead mb-auto">
-        <div class="inner">
-          <h3 class="masthead-brand"></h3>
-          <nav class="nav nav-masthead justify-content-center">
-            <a class="nav-link active" href="../index.html">Home</a>
-            <a class="nav-link active" href="../about.html">About</a>
-            <a class="nav-link active" href="../joinus.html">Join Us</a>
-            <a class="nav-link active" href="../contact.html">Contact</a>
-          </nav>
-        </div>
-      </header>
-      
-    <div id="events-upcoming" class="flex-container">
-    </div>
-    <div id="events-past" class="flex-container">
-    </div>
-    <!---<script src="dist/format-google-calendar.min.js"></script>-->
-    <script src="./app.js"></script>
-    <script>
+/*.flex-container {
+  /* We first create a flex layout context 
+  display: flex;
+  /* Then we define the flow direction 
+     and if we allow the items to wrap 
+   * Remember this is the same as:
+   * flex-direction: row;
+   * flex-wrap: wrap;
+   
+}*/
 
-      formatGoogleCalendar.init({ 
-        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/a002kfcn8uapp6anbi70scguvo@group.calendar.google.com/events?key=AIzaSyCM4s7_B47Ikshr3u_mIC3zau5f9fCyjro',
-        past: true,
-        upcoming: false,
-        sameDayTimes: true,
-        pastTopN: 200,
-        upcomingTopN: 200,
-        recurringEvents: true,
-        //itemsTagName: "div class='sidebar-box'",
-        upcomingSelector: '#events-upcoming',
-        pastSelector: '#events-past',
-        upcomingHeading: '',
-        pastHeading: '<h1>Past events</h1>',
-        format: ["<b>Event: ", '*summary*', '<br>Date:</b> ', '*date*', '<br><b>Location:</b> ', '*location*', '*description*'],
-        timeMin: '2016-06-03T10:00:00-07:00'/*,
-        timeMax: '2020-06-03T10:00:00-07:00'*/
-      });
-            formatGoogleCalendar.init({ 
-        calendarUrl: 'https://www.googleapis.com/calendar/v3/calendars/a002kfcn8uapp6anbi70scguvo@group.calendar.google.com/events?key=AIzaSyCM4s7_B47Ikshr3u_mIC3zau5f9fCyjro',
-        past: false,
-        upcoming: true,
-        sameDayTimes: true,
-        pastTopN: 200,
-        upcomingTopN: 200,
-        recurringEvents: true,
-        //itemsTagName: "div class='sidebar-box-b'",
-        upcomingSelector: '#events-upcoming',
-        pastSelector: '#events-past',
-        upcomingHeading: '<h1>Upcoming events</h1><p><i>Note: This is the list of events with their full descriptions, so this page is rather long. I suggest you type <u>CTRL + F</u> (find) if you are searching for something in particular.</i></p>',
-        pastHeading: '',
-        format: ["<b>Event: ", '*summary*', '<br>Date:</b> ', '*date*', '<br><b>Location:</b> ', '*location*', '<br> ', '*description*'],
-        timeMin: '2016-06-03T10:00:00-07:00'/*,
-        timeMax: '2020-06-03T10:00:00-07:00'*/
-      });
+/*.flex-item {
+  max-height: 500px;
+  position: relative;
+  overflow: hidden;
+}*/
 
-    $(function() {
+/*.flex-item .read-more {
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  width: 100%; 
+  text-align: center; 
+  margin: 0; padding: 30px 0; 
+  background-color: #dddddd;*/
+  
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  /*background-image: linear-gradient(to bottom, transparent, black);
+}*/
 
-			var $el, $ps, $up, totalHeight;
+/* On screens that are 992px wide or less, go from four columns to two columns */
+/*@media screen and (max-width: 992px) {
+  .column {
+    flex: 100%;
+  }
+}*/
 
-			$(document).on("click", '.sidebar-box .button', function() {
+.flex-container {
+    list-style: none;
+    margin: 0;
+    padding: 0; /* NEW */
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex; /* NEW */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+}
 
-				//alert("hi!!!!");
+ul {
 
-				totalHeight = 0
+  -ms-box-orient: horizontal;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -moz-flex;
+  display: flex; 
+  -webkit-box-pack: justify; 
+      -ms-flex-pack: justify; 
+          justify-content: space-between; 
+   padding: 0;
 
-				$el = $(this);
-				$p  = $el.parent();
-				$up = $p.parent();
-				$ps = $up.find("p:not('.read-more')");
+   li {
+      padding: 0;
+   }
+}
 
-				// measure how tall inside should be by adding together heights of all inside paragraphs (except read-more paragraph)
-				$ps.each(function() {
-					totalHeight += $(this).outerHeight() + ($(this).outerHeight() * 0.4);
-					// FAIL totalHeight += $(this).css("margin-bottom");
-				});
+/* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  #events-past {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 
-				$up
-					.css({
-						// Set height to prevent instant jumpdown when max height is removed
-						"height": $up.height(),
-						"max-height": 9999
-					})
-					.animate({
-						"height": totalHeight
-					});
+@media screen and (min-width: 1100px) {
+  .column {
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+  }
+}
 
-				// fade out read-more
-				$p.fadeOut();
+#events-past, #events-upcoming{
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  flex-direction: column;
+}
 
-				// prevent jump-down
-				return false;
+.sidebar-box {
+  height: 350px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: -o-flex;
+    display: flex;
+-webkit-box-flex: 40%;
+-moz-flex: 1;
+flex: 1;
+    -ms-flex: 40%;
 
-			});
+        flex: 40%;
+  /*max-height: 350px;*/
+  position: relative;
+  overflow: hidden;
+    margin-bottom: 20px;
+  margin-left: 10px;
+  margin-right: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) !important;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
+  padding: 10px;
+  list-style-type:none;
+  border: 10px solid #eb670f;
+    -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+}
+/*.sidebar-box .read-more { 
+      height: 1000vh;
+  position: absolute; 
+  bottom: 0; 
+  left: 0;
+  text-align: center; 
+  margin: 0; padding: 10px 0; 
+  
+  /* "transparent" only works here because == rgba(0,0,0,0) */
+  /*background-image: linear-gradient(to bottom, transparent, black);*/
+  /*background-color: #e24104 !important;
+}*/
 
-		});
-    </script>
-  </body>
-</html>
+a {
+  color: #ffffff !important;
+}
+
+html,
+body {
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/lib.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
+  background-repeat: none;
+  background-position: left;
+  background-attachment: fixed;
+  color: #ffffff !important;
+}
+
+.cover-heading, h1, h2, h3, label {
+  font-family: "Snippet-Regular" !important;
+}
+
+@font-face {
+  font-family: "Snippet-Regular";
+  src: url("../fonts/Snippet-Regular.ttf") format("truetype");
+}
+
+/*
+ * Header
+ */
+.masthead {
+  margin-bottom: 2rem;
+}
+
+.masthead-brand {
+  margin-bottom: 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: 700;
+  color: rgba(255, 255, 255, .5);
+  background-color: transparent;
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover,
+.nav-masthead .nav-link:focus {
+  border-bottom-color: rgba(255, 255, 255, .25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+@media (min-width: 48em) {
+  .masthead-brand {
+    float: left;
+  }
+  .nav-masthead {
+    float: center;
+  }
+}
+
+h1 {
+  margin-top: 20px !important;
+  margin-bottom: 20px !important;
+}
+
+.collapse a:link, a:visited {
+  text-decoration: underline;
+  color: #eb670f !important;
+}
