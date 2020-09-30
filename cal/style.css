@@ -71,6 +71,7 @@ a.morelink {
 }*/
 
 .flex-container {
+    height: 100vh;
     list-style: none;
     margin: 0;
     padding: 0; /* NEW */
@@ -182,7 +183,6 @@ a {
 
 html,
 body {
-  height: 100%;
   background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/lib.jpg");
   background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
