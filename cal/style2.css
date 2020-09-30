@@ -83,6 +83,7 @@ a.morelink {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
   height: 20em;
+  flex-direction: column;
 }
 
 ul {
