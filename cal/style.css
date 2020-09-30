@@ -1,3 +1,10 @@
+/*
+* Prefixed by https://autoprefixer.github.io
+* PostCSS: v7.0.29,
+* Autoprefixer: v9.7.6
+* Browsers: last 4 version
+*/
+
 /*a {
   color: #0254EB
 }
@@ -29,7 +36,6 @@ a.morelink {
 /*.flex-container {
   /* We first create a flex layout context 
   display: flex;
-
   /* Then we define the flow direction 
      and if we allow the items to wrap 
    * Remember this is the same as:
@@ -67,11 +73,12 @@ a.morelink {
 .flex-container {
     list-style: none;
     margin: 0;
-    padding: 0;
-    display: -webkit-flex; /* NEW */
-    display: flex;
-    -webkit-flex-wrap: wrap; /* NEW */
-    flex-wrap: wrap;
+    padding: 0; /* NEW */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex; /* NEW */
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
     font-family: "Open Sans";
 }
 
@@ -79,14 +86,12 @@ ul {
 
   -ms-box-orient: horizontal;
   display: -webkit-box;
-  display: -moz-box;
   display: -ms-flexbox;
   display: -moz-flex;
-  display: -webkit-flex;
-  display: flex;
-
-  -webkit-justify-content: space-between; 
-  justify-content: space-between; 
+  display: flex; 
+  -webkit-box-pack: justify; 
+      -ms-flex-pack: justify; 
+          justify-content: space-between; 
 
    width: 100%;
    padding: 0;
@@ -99,30 +104,44 @@ ul {
 /* On screens that are 600px wide or less, make the columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
   #events-past {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
 }
 
 @media screen and (min-width: 1100px) {
   .column {
-    flex: 25%;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
   }
 }
 
 #events-past, #events-upcoming{
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .sidebar-box {
 
-flex: 40%;
+-webkit-box-flex: 40%;
+
+    -ms-flex: 40%;
+
+        flex: 40%;
   max-height: 350px;
   position: relative;
   overflow: hidden;
     margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 20px;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.7)), to(rgba(0, 0, 0, 0.7))) !important;
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
   background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)) !important;
   padding: 10px;
   list-style-type:none;
@@ -148,6 +167,8 @@ a {
 html,
 body {
   height: 100%;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.5))), url("../img/lib.jpg");
+  background: -o-linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
   background-repeat: none;
   background-position: left;
