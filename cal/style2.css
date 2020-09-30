@@ -82,6 +82,7 @@ a.morelink {
     display: flex; /* NEW */
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+  height: 20em;
 }
 
 ul {
@@ -129,7 +130,6 @@ ul {
 }
 
 .sidebar-box {
-  height: 350px;
     display: -webkit-box;
     display: -webkit-flex;
     display: -moz-flex;
@@ -144,7 +144,7 @@ flex: 1;
         flex: 40%;
   /*max-height: 350px;*/
   position: relative;
-  overflow: hidden;
+  overflow: auto;
     margin-bottom: 20px;
   margin-left: 10px;
   margin-right: 20px;
