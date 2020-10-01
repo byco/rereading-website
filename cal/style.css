@@ -140,6 +140,7 @@ flex: 40%;
   /* "transparent" only works here because == rgba(0,0,0,0) */
   /*background-image: linear-gradient(to bottom, transparent, black);*/
   background-color: #e24104 !important;
+  color: #fff !important;
 }
 
 a {
@@ -220,5 +221,5 @@ h1 {
 
 #all-events a:link, a:visited {
   text-decoration: underline;
-  color: #eb670f !important;
+  color: #eb670f;
 }
