@@ -140,6 +140,9 @@ flex: 40%;
   /* "transparent" only works here because == rgba(0,0,0,0) */
   /*background-image: linear-gradient(to bottom, transparent, black);*/
   background-color: #e24104 !important;
+}
+
+.sidebar-box .read-more .button {
   color: #fff !important;
 }
 
