@@ -217,3 +217,8 @@ h1 {
   text-decoration: underline;
   color: #eb670f !important;
 }
+
+a:link, a:visited {
+  text-decoration: underline;
+  color: #eb670f;
+}
