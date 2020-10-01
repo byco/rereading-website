@@ -43,9 +43,12 @@
 	  if (screen.width <= 699) {
 	    document.location = "./allevents.html";
 	  }
+		
+	  if ((navigator.userAgent.match(/iPhone/i)) || (navigator.userAgent.match(/iPod/i))) {
+	    location.replace("./allevents.html");
+	  }
 	</script>
-	    
-	    
+	
     <script src="./app.js"></script>
     <script>
 
