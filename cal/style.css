@@ -218,7 +218,6 @@ h1 {
   color: #eb670f !important;
 }
 
-a:link, a:visited {
-  text-decoration: underline;
-  color: #eb670f;
+.a:link, a:visited {
+  color: #eb670f !important;
 }
