@@ -107,17 +107,16 @@ ul {
   }
 }
 
-#events-upcoming {
-  height: auto;
-}
-
 #events-past, #events-upcoming{
   display: flex;
   flex-wrap: wrap;
+  height: auto;
+  width: auto;
 }
 
 .sidebar-box {
   height: auto;
+  width: auto;
 flex: 40%;
   max-height: 350px;
   position: relative;
@@ -150,6 +149,7 @@ a {
 html,
 body {
   height: 100%;
+  width: 100%;
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("../img/lib.jpg");
   background-repeat: none;
   background-position: left;
