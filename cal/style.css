@@ -218,6 +218,7 @@ h1 {
   color: #eb670f !important;
 }
 
-.a:link, a:visited {
+.all-events a:link, a:visited {
+  text-decoration: underline;
   color: #eb670f !important;
 }
