@@ -142,10 +142,6 @@ flex: 40%;
   background-color: #e24104 !important;
 }
 
-.sidebar-box .read-more .button {
-  color: #fff !important;
-}
-
 a {
   color: #ffffff !important;
 }
@@ -225,4 +221,8 @@ h1 {
 #all-events a:link, a:visited {
   text-decoration: underline;
   color: #eb670f !important;
+}
+
+.sidebar-box .read-more .button {
+  color: #fff !important;
 }
