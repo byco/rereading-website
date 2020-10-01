@@ -220,9 +220,5 @@ h1 {
 
 #all-events a:link, a:visited {
   text-decoration: underline;
-  color: #eb670f !important;
-}
-
-.sidebar-box .read-more .button {
-  color: #fff !important;
+  color: #ff8b3d !important;
 }
