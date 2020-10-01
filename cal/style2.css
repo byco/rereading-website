@@ -172,8 +172,8 @@ flex: 1;
   /*background-color: #e24104 !important;
 }*/
 
-a {
-  color: #ffffff !important;
+a, a:link, a:visited {
+  color: #ff8b3d !important;
 }
 
 html,
