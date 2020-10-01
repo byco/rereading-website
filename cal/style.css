@@ -108,7 +108,7 @@ ul {
 }
 
 #events-upcoming {
-  min-height: 400px;
+  height: auto;
 }
 
 #events-past, #events-upcoming{
