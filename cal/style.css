@@ -71,7 +71,6 @@ a.morelink {
     display: flex;
     -webkit-flex-wrap: wrap; /* NEW */
     flex-wrap: wrap;
-    font-family: "Open Sans";
 }
 
 ul {
@@ -106,6 +105,10 @@ ul {
   .column {
     flex: 25%;
   }
+}
+
+#events-upcoming {
+  min-height: 400px;
 }
 
 #events-past, #events-upcoming{
