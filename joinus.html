@@ -31,6 +31,13 @@
 
   <h1 class="content-head is-center">Join Us</h1>
   <aside>
+      <p>If you have any questions about the club, you can contact: 
+          <a href="#" class="cryptedmail"
+           data-name="folderols"
+           data-domain="gmail"
+           data-tld="com"
+           onclick="window.location.href = 'mailto:' + this.dataset.name + '@' + this.dataset.domain + '.' + this.dataset.tld; return false;"></a>
+      </p>   
        <p>
            Interested in joining the book club? Please fill out the following form and we'll respond within a few days.
        </p>
@@ -101,6 +108,12 @@
 
   </form>
 </div>
+         
+<style>
+    .cryptedmail:after {
+      content: attr(data-name) "@" attr(data-domain) "." attr(data-tld); 
+    }
+</style>
 
   <!-- Submit the Form to Google Using "AJAX" -->
 <script data-cfasync="false" type="text/javascript" src="./src/form-submission-handler.js"></script>
