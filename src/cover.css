@@ -167,3 +167,11 @@ input, textarea {
   display: block !important;
   float: left !important;
 }
+
+@media (max-width: 600px) {
+
+    iframe {
+         width: 300px !important;
+    }
+
+}
