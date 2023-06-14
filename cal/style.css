@@ -222,3 +222,8 @@ h1 {
   text-decoration: underline;
   color: #ffe2cf !important;
 }
+
+span {
+ width:100%;
+ display: block;
+}
